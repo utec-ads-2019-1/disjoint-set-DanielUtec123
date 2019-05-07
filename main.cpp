@@ -14,6 +14,8 @@ struct Node {
     int rank;
     Node* father;
 
+    Node(){}
+
     Node(int data) {
         father = this;
         rank = 0;
@@ -42,7 +44,7 @@ public:
     void MakeSet(){
 
         for(int i=0;i<n;i++){
-            datos[i] = Node(i);
+            datos[i] = Node{i};
         }
     }
 
